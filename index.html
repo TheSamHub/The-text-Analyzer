@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>My Flask App</title></head>
+
+<body>
+<h1>The text Analyzer</h1>
+<form action="{{ url_for( 'successfull')}}" method="post">
+<label for="name">Book you read : </label>
+<input type="text" id="bookname" name="bookname" placeholder="text"><br><br>
+<label for="sleepinghours">Please provide your favourite paragraph: </label>
+<input type="text" id="para" name="para" placeholder="text"><br><br>
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+</body>
+</html>
