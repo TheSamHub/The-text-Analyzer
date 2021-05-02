@@ -10,3 +10,7 @@ app.py : It contains the flask web application python script.
 
 index.html : An HTML file containing the skeleton of the web application
 
+The_Text_Analyzer.ipynb : This is the colab notebook where different ML algorithms are applied and tested over the data to get the best model for predicting sentiments of                                   setences. Also all the models and algo's for segmentation of paragraph and topic suggestion have been trained and desiged here.
+
+                           
+
