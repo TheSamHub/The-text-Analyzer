@@ -55,11 +55,11 @@ def successfull():
        #vectors = vectorizer.fit_transform(df.text)
        #words_df = pd.DataFrame(vectors.toarray(), columns=vectorizer.get_feature_names())
        
-       unknown = pd.DataFrame({'content': combine})
-       unknown_vectors = vectorizer.transform(unknown.content)
-       unknown_words_df = pd.DataFrame(unknown_vectors.toarray(), columns=vectorizer.get_feature_names())
-       unknown['Sentiment Score'] = forest.predict_proba(unknown_words_df)[:,1]
-       unknown.values.tolist()
+       yes = pd.DataFrame({'content': combine})
+       yes_vectors = vectorizer.transform(yes.content)
+       yes_words_df = pd.DataFrame(yes_vectors.toarray(), columns=vectorizer.get_feature_names())
+       yes['Sentiment Score'] = forest.predict_proba(yes_words_df)[:,1]
+       yes.values.tolist()
        # for topic code is below 
        text1=para
        tokens = word_tokenize(text1)
@@ -72,7 +72,7 @@ def successfull():
        lem_tokens = [lemmatizer.lemmatize(t) for t in stopwords_removed]
        bag_words = Counter(lem_tokens)
        topic = bag_words.most_common(6)[0][0]
-    return ("<p>" + "</p><p>".join(unknown) + "</p>") +"\n" +"The topic suggested is :" + str(topic).upper()
+    return ("<p>" + "</p><p>".join(yes) + "</p>") +"\n" +"The topic suggested is :" + str(topic).upper()
     #return render_template("index.html")
 
 
